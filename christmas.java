@@ -29,8 +29,10 @@ class christmas{
         System.out.println("  ");
     }
     
-    System.out.println("       |    |    ");
-    System.out.println("       |    |     ");
-    System.out.println("       |    |     " );
-}
-}
+    System.out.println("                                                                       |    |                          ");
+        System.out.println("                                                                   |    |                          ");
+    
+        System.out.println("                                                                   |    |                          ");
+    
+    }
+    }

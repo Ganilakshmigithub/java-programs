@@ -10,17 +10,18 @@ class duplicatecount{
             a[i]=sc.nextInt();
         }
         for(int i=0;i<a.length;i++){
-            System.out.print(a[i]+" ");
-        }
-        int count=0;
-        for(int i=0;i<a.length;i++){
+            int count=1; //every item will have atleast count of 1
             for(int j=i+1;j<a.length;j++){
-                if(a[i]==a[j])
+                if(a[i]==a[j]){
                 count++;
+                a[j]=-1; //visted item will be -1
+                }
             }
-        }
-        if(count>0)
-            System.out.print("count of duplicate elements is: "+count);
+        if(a[i]!=-1&&count>1){  //if item isnt visited and have a count more than 1
+            System.out.println(a[i]+" element occurs "+count+" times");
             count=0;
+        }
+        }
     }
 }
+
