@@ -13,8 +13,6 @@ class Bank {
         System.out.println("Amount withdrawed successfully");
 
     }
-
-    pu
     public int getcurrent(){
         return amount;
     }
