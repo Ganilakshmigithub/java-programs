@@ -32,9 +32,13 @@ public class CategoryService {
 
     public Page<Category> getCategories(int page,int size){
         Pageable pageable = PageRequest.of(page, size,Sort.by("description"));
-        return categoryRepo.findAll(pageable.withPage(3));
+        return categoryRepo.findAll(pageable);
         
 
+    }
+
+    public void deleteAll(){
+        categoryRepo.deleteAllInBatch();
     }
 
 }
