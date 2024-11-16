@@ -1,9 +1,9 @@
-package Spring.boot.crud.controllers;
+package employee.management.controllers;
 public class ApiResponse {
-    private int status;   // for HTTP status code
-    private String message;   // for message to be displayed to the user
-    private Object data;  // The employee data or response data
-    private int page;  // Follow camelCase convention
+    private int status;   
+    private String message;   
+    private Object data;  
+    private int page;  
     private int totalPages;
     private long totalElements;
 

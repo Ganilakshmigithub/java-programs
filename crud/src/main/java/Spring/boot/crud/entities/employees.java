@@ -5,6 +5,7 @@ import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -22,7 +23,7 @@ public class employees {
     int id;
     String name;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL,fetch =FetchType.EAGER,orphanRemoval = true)
     @JoinColumn(name = "employee_id")  //id of employees will be foregin key in phone numbers table
     private Set<PhoneNumber> phoneNumbers = new HashSet<>();
 
@@ -41,6 +42,7 @@ public class employees {
     public void setName(String name) {
         this.name = name;
     }
+
     public Set<PhoneNumber> getPhoneNumbers() {
         return phoneNumbers;
     }
@@ -48,5 +50,4 @@ public class employees {
     public void setPhoneNumbers(Set<PhoneNumber> phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
     }
-
     }    
